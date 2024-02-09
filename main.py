@@ -15,6 +15,5 @@ async def root():
 
 @app.get("/hot-100/{year}")
 def read_item(year: str):
-    print(year)
     hot_100 = getChart(year)
     return {"json": hot_100}
